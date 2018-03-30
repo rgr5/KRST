@@ -36,3 +36,32 @@ public class MainForm extends JFrame {
 			}
 		});
 	}
+		/**
+	 * Объявление метода, в котором объявляются элементы экранной формы, ее события
+	 */
+	public MainForm() {
+		ImageIcon icon = new ImageIcon("src/rgr/unicorn2.png");
+		setIconImage(icon.getImage());
+		/**
+		 * Создание главной панели
+		 */
+		TitledBorder titledBorder = BorderFactory.createTitledBorder(null, "Выберите необходимый вам калькулятор", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("times new roman",Font.PLAIN,15), Color.black);
+		JPanel contentPane = new JPanel();
+		contentPane.setLayout(null);
+		contentPane.setBorder(titledBorder);
+		JPanel Panel1 = new JPanel();
+		Panel1.setBounds(50,15,500,650);
+		JPanel Panel2 = new JPanel();
+		Panel2.setLayout(null);
+		Panel2.setBounds(5,15,650,650);
+		/**
+		 * Задание шрифта и размера надписей для кнопок, меток, переключателей
+		 */
+		Font font = new Font("Times New Roman", Font.PLAIN, 25);
+		/**
+		 * Создание меток 
+		 */
+		/**
+		 * создание маски ввода 
+		 */
+		NumberFormat number = new DecimalFormat("##0.###");//маска ввода
