@@ -45,3 +45,37 @@ public class form2 extends JFrame {
 	/**
 	 * Объявление метода, в котором объявляются элементы экранной формы, ее события
 	 */
+public form2() {
+	
+		/**
+		 * Создание главной панели
+		 */
+		JPanel contentPane = new JPanel();
+		contentPane.setLayout(null);
+		contentPane.setBorder(BorderFactory.createTitledBorder("Для производственных помещений"));
+		JPanel Panel1 = new JPanel(new GridLayout(8, 1));
+		Panel1.setBounds(10,15,280,200);
+		JPanel Panel2 = new JPanel();
+		Panel2.setLayout(null);
+		Panel2.setBounds(300,15,350,200);
+		/**
+		 * Задание шрифта и размера надписей для кнопок, меток, переключателей
+		 */
+		Font font = new Font("Times New Roman", Font.PLAIN, 18);
+		/**
+		 * Создание меток 
+		 */
+		JLabel label_1 = new JLabel("Максимальная мощность, Вт");
+		label_1.setFont(font);
+		JLabel label_2 = new JLabel("Напряжение сети, В");
+		label_2.setFont(font);
+		final JLabel label_4 = new JLabel("");
+		label_4.setBounds(50, 60, 350, 20);
+		label_4.setFont(font);
+		JLabel label_5 = new JLabel("");
+		label_5.setBounds(80, 150, 350, 20);
+		label_5.setFont(font);
+		/**
+		 * создание маски ввода 
+		 */
+		NumberFormat number = new DecimalFormat("##0.##");//маска ввода
