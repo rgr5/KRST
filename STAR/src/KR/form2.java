@@ -79,3 +79,39 @@ public form2() {
 		 * создание маски ввода 
 		 */
 		NumberFormat number = new DecimalFormat("##0.##");//маска ввода
+		/**
+		 * Создание текстовый полей 
+		 */
+		final JFormattedTextField TxtBox = new JFormattedTextField(new NumberFormatter(number));//специальное текстовое поле для контроля ввода
+		TxtBox.setFont(font);
+		JFormattedTextField TxtBox_1 = new JFormattedTextField(new NumberFormatter(number));
+		TxtBox_1.setFont(font);
+		JFormattedTextField TxtBox_2 = new JFormattedTextField(new NumberFormatter(number));
+		TxtBox_2.setFont(font);
+		JFormattedTextField TxtBox_3 = new JFormattedTextField(new NumberFormatter(number));
+		TxtBox_3.setFont(font);
+		/**
+		 * Создание кнопки
+		 */
+		JButton btnNewButton = new JButton("Рассчитать");
+		btnNewButton.setFont(font);
+		btnNewButton.setBounds(50,20, 140, 40);
+		/**
+		 * Добавление элементов на панель для текстовых полей
+		 */
+		Panel1.add(label_1);
+		Panel1.add(TxtBox);
+		Panel1.add(label_2);
+		Panel1.add(TxtBox_1);
+		//Panel1.add(TxtBox_2);
+		TxtBox_1.setText(String.valueOf(count1));
+		TxtBox_1.disable();
+		/**
+		 * Добавление элементов на панель для кнопки
+		 */
+		Panel2.add(btnNewButton);
+		Panel2.add(label_4);
+		Panel2.add(label_5);
+		/**
+		 * Добавление элементов на главную панель
+		 */
