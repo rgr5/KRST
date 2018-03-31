@@ -65,3 +65,34 @@ public class MainForm extends JFrame {
 		 * создание маски ввода 
 		 */
 		NumberFormat number = new DecimalFormat("##0.###");//маска ввода
+                /**
+		 * Создание текстовых полей 
+		 */
+		/**
+		 * Создание кнопки
+		 */
+		JButton btnNewButton1 = new JButton("Для жилых помещений"); 
+		JButton btnNewButton2 = new JButton("Для производственных помещений");
+		JButton btnNewButton3 = new JButton("Для трансформаторов");
+		btnNewButton1.setFont(font);
+		btnNewButton1.setBounds(1, 10, 620, 100);
+		btnNewButton1.setFocusable(isDisplayable());
+		btnNewButton2.setFont(font);
+		btnNewButton2.setBounds(1,110, 620, 100);
+		btnNewButton2.setFocusable(isDisplayable());
+		/**
+		 * Добавление элементов на панель для текстовых полей
+		 */
+		/**
+		 * Добавление элементов на панель для кнопки
+		 */
+		Panel2.add(btnNewButton1);
+		Panel2.add(btnNewButton2);
+		/**
+		 * Добавление элементов на главную панель
+		 */
+		contentPane.add(Panel2);
+		contentPane.add(Panel1);
+		/**
+		 * Указание размера, расположения, названия экранной формы, добавление на нее главной панели
+		 */
