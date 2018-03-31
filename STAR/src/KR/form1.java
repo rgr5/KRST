@@ -124,3 +124,43 @@ public class form1 extends JFrame {
 		/**
 		 * Добавление элементов на главную панель
 		 */
+		contentPane.add(Panel1);
+		contentPane.add(Panel2);
+		setResizable(false);
+		/**
+		 * Указание размера, расположения, названия экранной формы, добавление на нее главной панели
+		 */
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setTitle("Калькулятор");
+		setContentPane(contentPane);
+		setBounds(100, 100, 600, 200);	
+		
+		/**
+		 * Событие для кнопки "Рассчитать". 
+		 */
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				k1=((Long) TxtBox.getValue()).intValue();
+				r1=(float) ((k1*1.2)/220);
+				label_4.setText(" Результат: "+ String.format("%.2f",r1 )+ " Ампер ");
+			}
+		});
+		
+		TxtBox.addKeyListener(new KeyAdapter() {
+			   public void keyTyped(KeyEvent e) {
+			      char c = e.getKeyChar();
+			      if ( ((c < '0') || (c > '9'))) {
+			         e.consume();  // игнорим введенные буквы и пробел
+			      }
+			   }
+			});
+		
+	}
+	
+	public static float sums(float k1,float r1)
+	{
+	float sum;
+	float s;
+	return sum = (float) ((k1*1.2)/220);
+	}
+}
