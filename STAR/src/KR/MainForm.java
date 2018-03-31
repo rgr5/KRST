@@ -96,3 +96,28 @@ public class MainForm extends JFrame {
 		/**
 		 * Указание размера, расположения, названия экранной формы, добавление на нее главной панели
 		 */
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setResizable(false);
+		setTitle("Расчет номинала предохранителей в электрической цепи");
+		setContentPane(contentPane);
+		setBounds(100, 100, 650, 280);	
+		
+		btnNewButton1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (e.getActionCommand().equals("Для жилых помещений")) {
+				new form1().setVisible(true);
+				//new form2().hide();
+				    }
+			}
+		});
+		//////////////////////////////////////////////////////////////
+		btnNewButton2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (e.getActionCommand().equals("Для производственных помещений")) {
+				new form2().setVisible(true);
+				    }
+			}
+		});
+	}
+	
+}
