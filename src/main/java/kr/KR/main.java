@@ -1,8 +1,7 @@
-package kr.KR;
 /**
  * объявление пакета
  */
-
+package kr.KR;
 /**
  * Импорт библиотек классов, необходимых для работы.
  */
@@ -13,18 +12,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.TitledBorder;
 import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.awt.event.ActionEvent;
 /**
  * 
  * Объявление публичного класса, наследующего члены класса JFrame 
  */
-public class MainForm extends JFrame {
-	int k1,k2,k3;
+public class main extends JFrame {
 	/**
 	 * Метод, отвечающий за запуск фрейма
 	 */
@@ -32,21 +27,21 @@ public class MainForm extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					MainForm frame = new MainForm();
+					main frame = new main();
 					frame.setVisible(true);
 				} catch (Exception e) {
+					/**
+					 * Вывод сообщений в случае ошибки для дальнейшей отладки
+					 */
 					e.printStackTrace();
 				}
 			}
 		});
 	}
-	
 	/**
 	 * Объявление метода, в котором объявляются элементы экранной формы, ее события
 	 */
-	public MainForm() {
-		ImageIcon icon = new ImageIcon("src/rgr/unicorn2.png");
-		setIconImage(icon.getImage());
+	public main() {
 		/**
 		 * Создание главной панели
 		 */
@@ -60,34 +55,20 @@ public class MainForm extends JFrame {
 		Panel2.setLayout(null);
 		Panel2.setBounds(5,15,650,650);
 		/**
-		 * Задание шрифта и размера надписей для кнопок, меток, переключателей
+		 * Задание шрифта и размера надписей для кнопок
 		 */
 		Font font = new Font("Times New Roman", Font.PLAIN, 25);
-		/**
-		 * Создание меток 
-		 */
-		/**
-		 * создание маски ввода 
-		 */
-		NumberFormat number = new DecimalFormat("##0.###");//маска ввода
-		/**
-		 * Создание текстовый полей 
-		 */
 		/**
 		 * Создание кнопки
 		 */
 		JButton btnNewButton1 = new JButton("Для жилых помещений");
 		JButton btnNewButton2 = new JButton("Для производственных помещений");
-		JButton btnNewButton3 = new JButton("Для трансформаторов");
 		btnNewButton1.setFont(font);
 		btnNewButton1.setBounds(1, 10, 620, 100);
 		btnNewButton1.setFocusable(isDisplayable());
 		btnNewButton2.setFont(font);
 		btnNewButton2.setBounds(1,110, 620, 100);
 		btnNewButton2.setFocusable(isDisplayable());
-		/**
-		 * Добавление элементов на панель для текстовых полей
-		 */
 		/**
 		 * Добавление элементов на панель для кнопки
 		 */
@@ -106,23 +87,25 @@ public class MainForm extends JFrame {
 		setTitle("Расчет номинала предохранителей в электрической цепи");
 		setContentPane(contentPane);
 		setBounds(100, 100, 650, 280);	
-		
+		/**
+		 * Событие для кнопки "Для жилых помещений". 
+		 */
 		btnNewButton1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (e.getActionCommand().equals("Для жилых помещений")) {
-				new form1().setVisible(true);
-				//new form2().hide();
+					f2 calc = new f2();
 				    }
 			}
 		});
-		//////////////////////////////////////////////////////////////
+		/**
+		 * Событие для кнопки "Для производственных помещений". 
+		 */
 		btnNewButton2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (e.getActionCommand().equals("Для производственных помещений")) {
-				new form2().setVisible(true);
+					l2 calc = new l2();
 				    }
 			}
 		});
 	}
-	
 }
