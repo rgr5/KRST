@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
  * Объявление публичного класса для создания зависимости между классами и выполнение вычислений 
  */
 public class l1 implements ActionListener {
+	float result;
 	/**
 	 * ссылка на родительский класс
 	 */
@@ -34,18 +35,14 @@ public class l1 implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
         Object src = e.getSource();
         if (src == parent.btnNewButton){
-        	k1=Float.parseFloat((String) parent.TxtBox1.getValue());
-			r1= (float) ((k1*1.2)/380);
-			parent.label_3.setText(" Результат: "+ String.format("%.2f",r1 )+ " Ампер ");
-			System.out.println(r1);
+			Float k1=Float.parseFloat((parent.TxtBox1.getText( )));
+			Float r1=Float.parseFloat((parent.TxtBox2.getText( )));
+			result= Calculation.sums(k1,r1);
+			System.out.println(result);
+			parent.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
         }  
 	}
 	
-	public static float sums(float k1,float r1)
-	{
-	float sum;
-	float s;
-	return sum = (float) ((k1*1.2)/380);
-	}
+
 	
 }

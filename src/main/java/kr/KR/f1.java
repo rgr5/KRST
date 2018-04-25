@@ -35,13 +35,11 @@ public class f1 implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
         Object src = e.getSource();
         if (src == parent.btnNewButton){
-        	k1=Float.parseFloat((String) parent.TxtBox1.getValue());
-        	//r1= Float.parseFloat((String) parent.TxtBox2.getValue());
-			r1= (float) ((k1*1.2)/220);
-			//sum_n.setText(""+ (result= Calculation.Calc_n(int_rad,sumok)));
-			//result=Calculation.sums(k1, r1);
-			parent.label_3.setText(" Результат: "+ String.format("%.2f",r1 )+ " Ампер ");
-			//System.out.println(r1);
+			Float k1=Float.parseFloat((parent.TxtBox1.getText( )));
+			Float r1=Float.parseFloat((parent.TxtBox2.getText( )));
+			result= Calculation.sums(k1,r1);
+			System.out.println(result);
+			parent.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
         } 
 	}
 	

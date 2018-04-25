@@ -1,5 +1,7 @@
 package kr.KR;
-
+/**
+ * Класс для расчётов
+ */
 public class Calculation {
     public static float sums(float k1, float r1) {
     	float sum;

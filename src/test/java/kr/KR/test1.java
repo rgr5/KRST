@@ -38,7 +38,6 @@ class test1 {
 		  /**
 		   * result1-значение из функции sums,расположеной в классе f1.
 		   */
-		  float result1=Calculation.sums(k1,r1);
 			/**
 			 * tests -выходное значение.
 			 */
@@ -46,7 +45,7 @@ class test1 {
 			/**
 			   * итоговая проверка, tests и result1 сравниваниются на равенство.
 			   */
-	    assertEquals(test1, result1);
+	    assertEquals(test1, Calculation.sums(k1,r1));
 	   /**
 		* Окончание теста расчёта номинала в электрической цепи для жилых помещений.
 		*/
@@ -62,7 +61,6 @@ class test1 {
 		  /**
 		   * result1-значение из функции sums,расположеной в классе l1.
 		   */
-			float result2=Calculation.sums(k2,r2);
 			/**
 			 * tests -выходное значение.
 			 */
@@ -70,7 +68,7 @@ class test1 {
 			/**
 			   * итоговая проверка, tests и result2 сравниваниются на равенство.
 			   */
-		assertEquals(test2, result2);
+		assertEquals(test2, Calculation.sums(k2,r2));
 		/**
 		* Окончание теста расчёта номинала в электрической цепи для производственных помещений.
 		*/
@@ -83,10 +81,6 @@ class test1 {
 		 * Необходимый коэффициент для расчёта 1.2.
 		 */
 		  float k3=(float)5500,r3=220;
-		  /**
-		   * result1-значение из функции sums, расположенный в классе f1.
-		   */
-			float result3=Calculation.sums(k3,r3);
 			/**
 			 * tests -выходное значение.
 			 */
@@ -94,7 +88,7 @@ class test1 {
 			/**
 			   * итоговая проверка, tests и result1 сравниваются на равенство.
 			   */
-	    assertEquals(test3, result3);
+	    assertEquals(test3,Calculation.sums(k3,r3));
 	   /**
 		* Окончание теста расчёта номинала в электрической цепи для жилых помещений.
 		*/
@@ -107,10 +101,6 @@ class test1 {
 		 * Необходимый коэффициент для расчёта 1.2.
 		 */
 		  float k4=(float)190,r4=(float) 380;
-		  /**
-		   * result1-значение из функции sums, расположенной в классе l1.
-		   */
-			float result4=Calculation.sums(k4,r4);
 			/**
 			 * tests -выходное значение.
 			 */
@@ -118,7 +108,7 @@ class test1 {
 			/**
 			   * итоговая проверка, tests и result2 сравниваются на равенство.
 			   */
-		assertEquals(test4,result4 );
+		assertEquals(test4,Calculation.sums(k4,r4));
 		/**
 		* Окончание теста расчёта номинала в электрической цепи для производственных помещений.
 		*/
@@ -131,10 +121,6 @@ class test1 {
 		 * Необходимый коэффициент для расчёта 1.2.
 		 */
 		  float k5=(float)110,r5=(float) 220;
-		  /**
-		   * result1-значение из функции sums, расположенный в классе f1.
-		   */
-			float result5=Calculation.sums(k5,r5);
 			/**
 			 * tests -выходное значение.
 			 */
@@ -142,7 +128,7 @@ class test1 {
 			/**
 			   * итоговая проверка, tests и result1 сравниваются на равенство.
 			   */
-	    assertEquals(test5, result5);
+	    assertEquals(test5, Calculation.sums(k5,r5));
 	   /**
 		* Окончание теста расчёта номинала в электрической цепи для жилых помещений.
 		*/
@@ -155,10 +141,6 @@ class test1 {
 		 * Необходимый коэффициент для расчёта 1.2.
 		 */
 		  float k6=(float)7600,r6=(float) 380;
-		  /**
-		   * result1-значение из функции sums, расположенной в классе l1.
-		   */
-			float result6=Calculation.sums(k6,r6);
 			/**
 			 * tests -выходное значение.
 			 */
@@ -166,7 +148,7 @@ class test1 {
 			/**
 			   * итоговая проверка, tests и result2 сравниваются на равенство.
 			   */
-		assertEquals(test6, result6);
+		assertEquals(test6,Calculation.sums(k6,r6));
 		/**
 		* Окончание теста расчёта номинала в электрической цепи для производственных помещений.
 		*/
@@ -179,10 +161,6 @@ class test1 {
 		 * Необходимый коэффициент для расчёта 1.2.
 		 */
 		  float k7=(float)143,r7=(float) 220;
-		  /**
-		   * result1-значение из функции sums, расположенный в классе f1.
-		   */
-			float result7=Calculation.sums(k7,r7);
 			/**
 			 * tests -выходное значение.
 			 */
@@ -190,7 +168,7 @@ class test1 {
 			/**
 			   * итоговая проверка, tests и result1 сравниваются на равенство.
 			   */
-	    assertEquals(test7, result7);
+	    assertEquals(test7, Calculation.sums(k7,r7));
 	   /**
 		* Окончание теста расчёта номинала в электрической цепи для жилых помещений.
 		*/
@@ -203,10 +181,6 @@ class test1 {
 		 * Необходимый коэффициент для расчёта 1.2.
 		 */
 		  float k8=(float)5700,r8=(float) 380;
-		  /**
-		   * result1-значение из функции sums, расположенной в классе l1.
-		   */
-			float result8=Calculation.sums(k8,r8);
 			/**
 			 * tests -выходное значение.
 			 */
@@ -214,7 +188,7 @@ class test1 {
 			/**
 			   * итоговая проверка, tests и result2 сравниваются на равенство.
 			   */
-		assertEquals(test8, result8);
+		assertEquals(test8, Calculation.sums(k8,r8));
 		/**
 		* Окончание теста расчёта номинала в электрической цепи для производственных помещений.
 		*/

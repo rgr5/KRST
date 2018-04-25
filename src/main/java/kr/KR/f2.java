@@ -14,6 +14,7 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 /**
  * Объявление публичного класса для создания окна 
  */
@@ -27,8 +28,8 @@ public class f2 {
 	JLabel label_1;
 	JLabel label_2;
 	JLabel label_3;
-	JFormattedTextField TxtBox1;
-	JFormattedTextField TxtBox2;
+	JTextField TxtBox1;
+	JTextField TxtBox2;
 	JButton btnNewButton;
 	/**
 	 * Объявление метода, в котором объявляются элементы экранной формы
@@ -68,7 +69,7 @@ public class f2 {
         Panel1.add(TxtBox2);
         TxtBox2.setBounds(50, 80, 350, 20);
         TxtBox2.setText(String.valueOf(220));
-		//TxtBox2.disable();
+		TxtBox2.disable();
         Panel1.add(btnNewButton);
         btnNewButton.setBounds(50, 20, 140, 40);
         Panel1.add(label_3);
