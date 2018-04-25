@@ -21,6 +21,10 @@ import java.awt.event.ActionEvent;
  */
 public class main extends JFrame {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * Метод, отвечающий за запуск фрейма
 	 */
 	public static void main(String[] args) {
