@@ -34,6 +34,7 @@ public class f2 {
 	/**
 	 * Объявление метода, в котором объявляются элементы экранной формы
 	 */
+	@SuppressWarnings("deprecation")
 	f2() {
 		/**
 		 * Задание шрифта и размера надписей для кнопок, меток;
@@ -107,6 +108,5 @@ public class f2 {
 	 * Запускаем класс f2
 	 */
 	public static void main(String[] args) {
-       f2 calc = new f2();
     }
 }

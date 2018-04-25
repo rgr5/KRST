@@ -10,10 +10,10 @@ import java.awt.Font;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JButton;
-import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 /**
  * Объявление публичного класса для создания окна 
  */
@@ -27,8 +27,8 @@ public class l2 {
 	JLabel label_1;
 	JLabel label_2;
 	JLabel label_3;
-	JFormattedTextField TxtBox1;
-	JFormattedTextField TxtBox2;
+	JTextField TxtBox1;
+	JTextField TxtBox2;
 	JButton btnNewButton;
 	/**
 	 * Объявление метода, в котором объявляются элементы экранной формы
@@ -42,10 +42,10 @@ public class l2 {
 		 * Создание и настройка компонентов формы
 		 */
 		JPanel Panel1 = new JPanel();
-		TxtBox1=new JFormattedTextField("");
+		TxtBox1=new JTextField("");
 		TxtBox1.setFont(font);
 		TxtBox1.setPreferredSize( new Dimension( 100, 24 ) );
-		TxtBox2=new JFormattedTextField();
+		TxtBox2=new JTextField();
 		TxtBox2.setFont(font);
 		TxtBox2.setPreferredSize( new Dimension( 100, 24 ) );
 		label_1=new JLabel("Максимальная мощность, Вт");
@@ -105,6 +105,5 @@ public class l2 {
 	 * Запускаем класс l2
 	 */
 	public static void main(String[] args) {
-       l2 calc = new l2();
     }
 }

@@ -38,7 +38,6 @@ public class f1 implements ActionListener {
 			Float k1=Float.parseFloat((parent.TxtBox1.getText( )));
 			Float r1=Float.parseFloat((parent.TxtBox2.getText( )));
 			result= Calculation.sums(k1,r1);
-			System.out.println(result);
 			parent.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
         } 
 	}
