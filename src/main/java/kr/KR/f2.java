@@ -68,7 +68,7 @@ public class f2 {
         Panel1.add(TxtBox2);
         TxtBox2.setBounds(50, 80, 350, 20);
         TxtBox2.setText(String.valueOf(220));
-		TxtBox2.disable();
+		//TxtBox2.disable();
         Panel1.add(btnNewButton);
         btnNewButton.setBounds(50, 20, 140, 40);
         Panel1.add(label_3);
