@@ -10,12 +10,12 @@ import java.awt.event.ActionListener;
 /**
  * Объявление публичного класса для создания зависимости между классами и выполнение вычислений 
  */
-public class MathForm2 implements ActionListener {
+public class MathForm implements ActionListener {
 	float result;
 	/**
 	 * ссылка на родительский класс
 	 */
-	ComponentForm2 parent; 
+	private ComponentForm parent;
 	/**
 	 * Переменные отвечающие за вычисление:
 	 *k1-Вводимая максимальная мощность
@@ -26,7 +26,7 @@ public class MathForm2 implements ActionListener {
 	/**
 	 * Установление связи между родительским и дочерним классом
 	 */
-	MathForm2(ComponentForm2 parent){
+	MathForm(ComponentForm parent){
         this.parent = parent;
     }
 	/**
@@ -37,11 +37,11 @@ public class MathForm2 implements ActionListener {
         if (src == parent.btnNewButton){
 			Float k1=Float.parseFloat((parent.TxtBox1.getText( )));
 			Float r1=Float.parseFloat((parent.TxtBox2.getText( )));
-            result=Calculation.sums(k1, r1);
+			result=Calculation.sums(k1, r1);
 			parent.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
-        }  
+        } 
 	}
 	
-
 	
+
 }

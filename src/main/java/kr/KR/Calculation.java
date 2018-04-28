@@ -1,4 +1,7 @@
 package kr.KR;
+
+import javax.swing.JFrame;
+
 /**
  * Класс для расчётов
  */

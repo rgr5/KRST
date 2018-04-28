@@ -10,6 +10,7 @@ import java.awt.Font;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -17,7 +18,7 @@ import javax.swing.JTextField;
 /**
  * Объявление публичного класса для создания окна 
  */
-public class ComponentForm2 {
+public class ComponentForm extends JFrame {
 	/**
 	 * Описание компонентов формы
 	 */
@@ -28,13 +29,13 @@ public class ComponentForm2 {
 	JLabel label_2;
 	JLabel label_3;
 	JTextField TxtBox1;
-	JTextField TxtBox2;
+	static JTextField TxtBox2;
+	public static JFrame frame;
 	JButton btnNewButton;
 	/**
 	 * Объявление метода, в котором объявляются элементы экранной формы
 	 */
-	@SuppressWarnings("deprecation")
-	ComponentForm2() {
+	ComponentForm() {
 		/**
 		 * Задание шрифта и размера надписей для кнопок, меток;
 		 */
@@ -43,10 +44,10 @@ public class ComponentForm2 {
 		 * Создание и настройка компонентов формы
 		 */
 		JPanel Panel1 = new JPanel();
-		TxtBox1=new JTextField("");
+		TxtBox1=new JFormattedTextField("");
 		TxtBox1.setFont(font);
 		TxtBox1.setPreferredSize( new Dimension( 100, 24 ) );
-		TxtBox2=new JTextField();
+		TxtBox2=new JFormattedTextField();
 		TxtBox2.setFont(font);
 		TxtBox2.setPreferredSize( new Dimension( 100, 24 ) );
 		label_1=new JLabel("Максимальная мощность, Вт");
@@ -68,7 +69,7 @@ public class ComponentForm2 {
         Panel1.add(label_2);
         Panel1.add(TxtBox2);
         TxtBox2.setBounds(50, 80, 350, 20);
-        TxtBox2.setText(String.valueOf(380));
+        //TxtBox2.setText(String.valueOf(220));
 		TxtBox2.disable();
         Panel1.add(btnNewButton);
         btnNewButton.setBounds(50, 20, 140, 40);
@@ -76,7 +77,7 @@ public class ComponentForm2 {
         /**
 		 * Помещаем панель на главный фрейм
 		 */
-		JFrame frame = new JFrame("Для производственных помещений");
+		frame = new JFrame("Для жилых помещений");
 		frame.setContentPane(Panel1);
 		frame.pack();
 		frame.setBounds(300,15,500,160);
@@ -97,13 +98,14 @@ public class ComponentForm2 {
 			   }
 			});
 		/**
-		 * Вызываем обработчик событий из класса l1
+		 * Вызываем обработчик событий из класса f1
 		 */
-		MathForm2 calcEngine = new MathForm2(this);
+		MathForm calcEngine = new MathForm(this);
 		 btnNewButton.addActionListener(calcEngine);
+		
 	}
 	/**
-	 * Запускаем класс l2
+	 * Запускаем класс f2
 	 */
 	public static void main(String[] args) {
     }
