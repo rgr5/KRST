@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>KRST</groupId>
   <artifactId>KRST</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0</version>
  <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -20,7 +20,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
     <build>
         <plugins>
 
@@ -40,7 +39,6 @@
                     </dependency>
                 </dependencies>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -51,19 +49,6 @@
                 </configuration>
             </plugin>
             <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-jar-plugin</artifactId>
-            <configuration>
-                <archive>
-                    <manifest>
-                        <addClasspath>true</addClasspath>
-                        <classpathPrefix>lib/</classpathPrefix>
-                        <mainClass>KR.main</mainClass>
-                    </manifest>
-                </archive>
-            </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
 				 <version>3.1.0</version>
@@ -72,13 +57,11 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>kr.KR.main</mainClass>
+                            <mainClass>kr.KR.MainForm</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
-
         </plugins>
-        
     </build>
 </project>
