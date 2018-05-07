@@ -36,7 +36,7 @@ public class CalculationTests {
 		 */
 		  float k1=(float)330,r1=220;
 			/**
-			   * итоговая проверка, tests и result1 сравниваниются на равенство.
+			   * итоговая проверка
 			   */
 	    assertEquals((float)1.8, Calculation.sums(k1, r1));
 	   /**
@@ -46,8 +46,8 @@ public class CalculationTests {
 	@Test
 	void testn2() {
 	    /**
-		 * Максимальная мощность 300.
-		 * Напряжение сети 220.
+		 * Максимальная мощность 760.
+		 * Напряжение сети 380.
 		 * Необхожимый коэфицент для расчёта 1.2.
 		 */
 		  float k2=(float)760,r2=(float) 380;
@@ -62,7 +62,7 @@ public class CalculationTests {
 	@Test
 	void testn3() {
 		/**
-		 * Максимальная мощность 190.
+		 * Максимальная мощность 5500.
 		 * Напряжение сети 220.
 		 * Необходимый коэффициент для расчёта 1.2.
 		 */

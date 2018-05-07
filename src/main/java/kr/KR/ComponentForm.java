@@ -9,12 +9,14 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFormattedTextField;
+import javax.swing.JTextField;
+
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 /**
  * Объявление публичного класса для создания окна 
  */
@@ -27,8 +29,8 @@ public class ComponentForm extends JFrame {
 	JPanel Panel2;
 	JLabel label_1;
 	JLabel label_2;
-	JLabel label_3;
-	JTextField TxtBox1;
+	static JLabel label_3;
+	static JTextField TxtBox1; 
 	static JTextField TxtBox2;
 	public static JFrame frame;
 	JButton btnNewButton;
@@ -44,10 +46,10 @@ public class ComponentForm extends JFrame {
 		 * Создание и настройка компонентов формы
 		 */
 		JPanel Panel1 = new JPanel();
-		TxtBox1=new JFormattedTextField("");
+		TxtBox1=new JTextField("");
 		TxtBox1.setFont(font);
 		TxtBox1.setPreferredSize( new Dimension( 100, 24 ) );
-		TxtBox2=new JFormattedTextField();
+		TxtBox2=new JTextField();
 		TxtBox2.setFont(font);
 		TxtBox2.setPreferredSize( new Dimension( 100, 24 ) );
 		label_1=new JLabel("Максимальная мощность, Вт");
@@ -86,27 +88,39 @@ public class ComponentForm extends JFrame {
 		 */
 		frame.setVisible(true);
 		frame.setResizable(false);
+		frame.setIconImage(MainForm.icon1.getImage());
 		/**
 		 * Запрещаем ввод всего кроче цифр и backspace в текстовое поле
 		 */
 		TxtBox1.addKeyListener(new KeyAdapter() {
 			   public void keyTyped(KeyEvent e) {
 			      char c = e.getKeyChar();
-			      if ( ((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) {
-			         e.consume();  
-			      }
+			      /**
+					 * обработка исключений
+					 */
+					try {
+						/**
+						 * Обработка 1го введенного символа , ограничение на длину строки
+						 * matches-поиск совпадений по заданному шаблону
+						 */
+						if(!TxtBox1.getText().matches("[0-9]{0,4}"))  throw new Exception("Нельзя больше 5 символов");
+						if(TxtBox1.getText().matches("")&& (c=='0')) throw new Exception("Выражение не должно начинатся с нуля");
+						if ( ((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) throw new Exception("Можно вводить только числа от 0 до 9");
+					} 
+					catch (Exception e1) {
+						e.consume();
+						JOptionPane.showMessageDialog(new JFrame(),e1.getMessage(), "ОШИБКА",JOptionPane.ERROR_MESSAGE);
+					}
+	
 			   }
-			});
+			}) ;
 		/**
 		 * Вызываем обработчик событий из класса f1
 		 */
 		MathForm calcEngine = new MathForm(this);
 		 btnNewButton.addActionListener(calcEngine);
-		
 	}
-	/**
-	 * Запускаем класс f2
-	 */
 	public static void main(String[] args) {
+		
     }
 }
