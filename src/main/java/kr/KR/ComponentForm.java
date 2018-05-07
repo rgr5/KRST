@@ -105,7 +105,7 @@ public class ComponentForm extends JFrame {
 						 */
 						if(!TxtBox1.getText().matches("[0-9]{0,4}"))  throw new Exception("Нельзя больше 5 символов");
 						if(TxtBox1.getText().matches("")&& (c=='0')) throw new Exception("Выражение не должно начинатся с нуля");
-						if ( ((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) throw new Exception("Можно вводить только числа от 0 до 9");
+						if ( ((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) throw new Exception("Можно вводить только цифры от 0 до 9");
 					} 
 					catch (Exception e1) {
 						e.consume();
