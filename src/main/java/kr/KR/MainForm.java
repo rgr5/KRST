@@ -124,15 +124,16 @@ public class MainForm extends JFrame {
 		setContentPane(contentPane);
 		setBounds(100, 100, 650, 280);
 		/**
-		 * Добавление иконки для фрейма
-		 */
-		/**
 		 * Событие для кнопки "Для жилых помещений". 
 		 */
 		btnNewButton1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if (e.getActionCommand().equals("Для жилых помещений")) {
 					new ComponentForm();
+					/**
+					 * Меняем цвет кнокпи. 
+					 */
+					ComponentForm.btnNewButton.setBackground(Color.green);
 					ComponentForm.frame.setTitle("Для жилых помещений");
 					ComponentForm.TxtBox2.setText(String.valueOf(220));
 				    }

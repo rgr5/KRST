@@ -8,7 +8,7 @@ package kr.KR;
 public class Calculation {
     public static float sums(float k1, float r1) {
     	/**
-    	 * Переменная для выполнения рассчетов
+    	 * Переменная для выполнения расчётов
     	 */
     	float sum;
     	/**
@@ -21,4 +21,3 @@ public class Calculation {
     	return sum;
     }
 }
-

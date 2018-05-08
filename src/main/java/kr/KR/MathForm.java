@@ -15,10 +15,6 @@ import javax.swing.JOptionPane;
  */
 public class MathForm implements ActionListener {
 	/**
-	 * Ссылка на родительский класс
-	 */
-	private ComponentForm parent;
-	/**
 	 * Переменные отвечающие за вычисление:
 	 *k1-Вводимая максимальная мощность
 	 *r1-Заранее заданное напряжение сети
@@ -31,10 +27,9 @@ public class MathForm implements ActionListener {
 	 * Установление связи между родительским и дочерним классом
 	 */
 	MathForm(ComponentForm parent){
-        this.parent = parent;
     }
 	/**
-	 * Событие для кнопки "Рассчитать", для производственных помещений.
+	 * Событие для кнопки "Рассчитать", присутствует обработка ошибок.
 	 */
 	public void actionPerformed(ActionEvent e)  {
 		try {
@@ -45,15 +40,15 @@ public class MathForm implements ActionListener {
         /**
     	 *Условие  для прослушиваемой кнопки
     	 */
-        if (src == parent.btnNewButton){
+        if (src == ComponentForm.btnNewButton){
         	/**
         	 * Ссчитывание введенно максимальной мощности
         	 */
-			Float k1=Float.parseFloat((parent.TxtBox1.getText( )));
+			Float k1=Float.parseFloat((ComponentForm.TxtBox1.getText( )));
 			/**
 			 * Считывание заранее заданного напряжения сети
 			 */
-			Float r1=Float.parseFloat((parent.TxtBox2.getText( )));
+			Float r1=Float.parseFloat((ComponentForm.TxtBox2.getText( )));
 			/**
 			 * Вычисление напряжения в сети с помощью специальной функции расчёта
 			 */
@@ -61,12 +56,11 @@ public class MathForm implements ActionListener {
 			/**
 			 * Вввод результатов на экранную форму
 			 */
-			parent.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
+			ComponentForm.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
         } 
 	}
 		catch(Exception ex) {
 			JOptionPane.showMessageDialog(new JFrame(),ex.getMessage(), "ОШИБКА",JOptionPane.ERROR_MESSAGE);
     	}
-	}
-		
+	}	
 }
