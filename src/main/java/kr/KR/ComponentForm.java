@@ -82,7 +82,6 @@ public class ComponentForm extends JFrame {
 		 */
 		frame = new JFrame("Для жилых помещений");
 		frame.setContentPane(Panel1);
-		frame.pack();
 		frame.setBounds(300,15,500,160);
 		/**
 		 * Отображаем окно
@@ -124,6 +123,6 @@ public class ComponentForm extends JFrame {
 		 * Вызываем обработчик событий из класса MathForm
 		 */
 		MathForm calcEngine = new MathForm(this);
-		 btnNewButton.addActionListener(calcEngine);
+	    btnNewButton.addActionListener(calcEngine);
 	}
 }

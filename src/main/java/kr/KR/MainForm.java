@@ -36,7 +36,7 @@ public class MainForm extends JFrame {
 	/**
 	 * Объявление метода, в котором объявляются элементы экранной формы, ее события
 	 */
-	public MainForm() throws Exception {
+	public MainForm() {
 		ImageIcon icon2 = new ImageIcon(MainForm.class.getResource("/home.png"));
 		ImageIcon icon3 = new ImageIcon(MainForm.class.getResource("/production.png"));
 		/**
@@ -108,7 +108,6 @@ public class MainForm extends JFrame {
 		 * Добавление элементов на главную панель
 		 */
 		contentPane.add(Panel2);
-		contentPane.add(Panel1);
 		/**
 		 * Запрет на изменения размера окна
 		 */

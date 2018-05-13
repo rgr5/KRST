@@ -44,11 +44,11 @@ public class MathForm implements ActionListener {
         	/**
         	 * Ссчитывание введенно максимальной мощности
         	 */
-			Float k1=Float.parseFloat((ComponentForm.TxtBox1.getText( )));
+			k1=Float.parseFloat((ComponentForm.TxtBox1.getText( )));
 			/**
 			 * Считывание заранее заданного напряжения сети
 			 */
-			Float r1=Float.parseFloat((ComponentForm.TxtBox2.getText( )));
+			r1=Float.parseFloat((ComponentForm.TxtBox2.getText( )));
 			/**
 			 * Вычисление напряжения в сети с помощью специальной функции расчёта
 			 */
