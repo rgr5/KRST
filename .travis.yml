@@ -1,4 +1,8 @@
-language: java
-script: mvn test -B
-os: -windows
-before_instal:export DISPLAY=:1.0
+language: 
+java
+script: 
+mvn test -B
+os: 
+-windows
+before_instal:
+export DISPLAY=:1.0
