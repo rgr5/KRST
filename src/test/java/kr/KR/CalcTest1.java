@@ -34,7 +34,7 @@ public class CalcTest1{
 		 */
 		  float k1=(float)330,r1=220;
 			/**
-			   * 
+			   * Проверяем верное ли значение получается в итоге рассчетов.
 			   */
 	    assertEquals((float)1.8, CalcTest1.sums(k1, r1));
 	}
