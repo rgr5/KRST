@@ -16,11 +16,9 @@ public class CalcTest6{
 	/**
 	 * Создание тестовых методов.
 	 */
-	MainForm CalcTest6;
-
     @BeforeEach
    void setUp() {
-    	CalcTest6 = new MainForm();
+    	new MainForm();
     }
     @Test
 	void testn6() {

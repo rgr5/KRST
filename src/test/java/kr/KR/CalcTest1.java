@@ -16,11 +16,9 @@ public class CalcTest1{
 	/**
 	 * Создание тестовых методов.
 	 */
-	Calculation CalcTest1;
-
     @BeforeEach
    void setUp() {
-    	CalcTest1 = new Calculation();
+    	new Calculation();
     }
 	/**
 	 * Создание тестовых методов.

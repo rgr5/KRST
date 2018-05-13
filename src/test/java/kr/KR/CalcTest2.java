@@ -20,7 +20,7 @@ public class CalcTest2{
 
     @BeforeEach
    void setUp() {
-    	CalcTest2 = new ComponentForm();
+    	new ComponentForm();
     }
     @Test
 	void testn2() {

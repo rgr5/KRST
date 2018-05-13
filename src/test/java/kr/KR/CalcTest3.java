@@ -16,11 +16,9 @@ public class CalcTest3{
 	/**
 	 * Создание тестовых методов.
 	 */
-	ComponentForm CalcTest3;
-
     @BeforeEach
    void setUp() {
-    	CalcTest3 = new ComponentForm();
+    	new ComponentForm();
     }
     @Test
 	void testn2() {
