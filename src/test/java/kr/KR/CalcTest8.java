@@ -27,6 +27,6 @@ public class CalcTest8{
 			/**
 			   * Проверка того, не является ли поле TxtBox2(напряжение в ести) пустым.
 			   */
-		assertNotNull(CalcTest8.TxtBox2.getText());
+		assertNotNull(ComponentForm.TxtBox2.getText());
 	}
 }

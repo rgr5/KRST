@@ -29,6 +29,6 @@ public class CalcTest5{
 			   * Проверка 1й формы-Для жилых помещений. 
 			   * проверяет верное ли значение задается для TxtBox2(Напряжение в сети).
 			   */
-	    assertTrue(CalcTest5.n1==220);
+	    assertTrue(MainForm.n1==220);
 	}
 }

@@ -36,6 +36,6 @@ public class CalcTest1{
 			/**
 			   * Проверяем верное ли значение получается в итоге рассчетов.
 			   */
-	    assertEquals((float)1.8, CalcTest1.sums(k1, r1));
+	    assertEquals((float)1.8, Calculation.sums(k1, r1));
 	}
 }

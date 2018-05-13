@@ -2,7 +2,6 @@
  * Объявление пакета, в котором находится класс.
  */
 package kr.KR;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -28,6 +27,6 @@ public class CalcTest3{
 			/**
 			   * итоговая проверка, того установлен ли шрифт для кнопки
 			   */
-		  assertTrue(CalcTest3.btnNewButton.isFontSet());
+		  assertTrue(ComponentForm.btnNewButton.isFontSet());
 	}
 }

@@ -31,6 +31,6 @@ public class CalcTest2{
 			/**
 			   * итоговая проверка, выясняем правильно ли написана строка в label_1.
 			   */
-		  assertEquals(k1, CalcTest2.label_1.getText());
+		  assertEquals(k1, ComponentForm.label_1.getText());
 	}
 }

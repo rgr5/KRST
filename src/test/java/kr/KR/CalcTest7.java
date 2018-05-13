@@ -27,6 +27,6 @@ public class CalcTest7{
    			/**
    			   * Проверка формы для компонентов на возможность отображения.
    			   */
-   	    assertTrue(CalcTest7.frame.isVisible());
+   	    assertTrue(ComponentForm.frame.isVisible());
    	}
 }
