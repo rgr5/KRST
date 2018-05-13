@@ -16,26 +16,21 @@ public class CalcTest2{
 	/**
 	 * Создание тестовых методов.
 	 */
-	Calculation CalcTest2;
+	ComponentForm CalcTest2;
 
     @BeforeEach
    void setUp() {
-    	CalcTest2 = new Calculation();
+    	CalcTest2 = new ComponentForm();
     }
     @Test
 	void testn2() {
 	    /**
-		 * Максимальная мощность 760.
-		 * Напряжение сети 380.
-		 * Необхожимый коэфицент для расчёта 1.2.
+		 * Значение строки которой должен соотвествовать label_1.
 		 */
-		  float k2=(float)760,r2=(float) 380;
+		  String k1="Максимальная мощность, Вт";
 			/**
-			   * итоговая проверка, tests и result2 сравниваниются на равенство.
+			   * итоговая проверка, выясняем правильно ли написана строка в label_1.
 			   */
-		assertEquals((float)2.4, CalcTest2.sums(k2,r2));
-		/**
-		* Окончание теста расчёта номинала в электрической цепи для производственных помещений.
-		*/
+		  assertEquals(k1, CalcTest2.label_1.getText());
 	}
 }

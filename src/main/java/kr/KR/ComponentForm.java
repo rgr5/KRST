@@ -2,6 +2,7 @@
  * объявление пакета
  */
 package kr.KR;
+import java.awt.Color;
 /**
  * Библиотеки необходимые для работы
  */
@@ -109,8 +110,8 @@ public class ComponentForm extends JFrame {
 						 * Обработка 1го введенного символа , ограничение на длину строки
 						 * matches-поиск совпадений по заданному шаблону
 						 */
-						if(!TxtBox1.getText().matches("[0-9]{0,4}"))  throw new Exception("Нельзя вводить больше 5 символов");
-						if(TxtBox1.getText().matches("")&& (c=='0')) throw new Exception("Выражение не должно начинатся с нуля");
+						if(!TxtBox1.getText().matches("[0-9]{0,4}") && (c != KeyEvent.VK_BACK_SPACE))  throw new Exception("Нельзя вводить больше 5 символов");
+						if(TxtBox1.getText().matches("")&& (c=='0') && (c != KeyEvent.VK_BACK_SPACE)) throw new Exception("Выражение не должно начинатся с нуля");
 						if ( ((c < '0') || (c > '9')) && (c != KeyEvent.VK_BACK_SPACE)) throw new Exception("Можно вводить только цифры от 0 до 9");
 					} 
 					catch (Exception e1) {

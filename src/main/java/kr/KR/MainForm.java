@@ -21,12 +21,21 @@ import javax.swing.border.TitledBorder;
  * Объявление публичного класса, наследующего члены класса JFrame 
  */
 public class MainForm extends JFrame {
+	/**
+	 * Значения для напряжения в сети
+	 * 
+	 */
+	static int n1=220,n2=380;
+	/**
+	 * Загрузка инконки для главной формы
+	 * 
+	 */
 	public static ImageIcon icon1 = new ImageIcon(MainForm.class.getResource("/main.png"));
 	/**
 	 * Метод, отвечающий за запуск фрейма
 	 * 
 	 */
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		/**
 		 * Создание и вызов главной формы
 		 */
@@ -42,7 +51,7 @@ public class MainForm extends JFrame {
 		/**
 		 * Создание главной панели
 		 */
-		TitledBorder titledBorder = BorderFactory.createTitledBorder(null, "Выберите необходимый вам калькулятор", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("times new roman",Font.PLAIN,15), Color.black);
+		TitledBorder titledBorder = BorderFactory.createTitledBorder(null, "Выберите необходимый вам калькулятор:", TitledBorder.DEFAULT_JUSTIFICATION, TitledBorder.DEFAULT_POSITION, new Font("times new roman",Font.PLAIN,15), Color.black);
 		JPanel contentPane = new JPanel();
 		/**
 		 * Отключение автоматичского размещения компонентов на панели
@@ -55,7 +64,11 @@ public class MainForm extends JFrame {
 		 */
 		Panel1.setBounds(50,15,500,650);
 		JPanel Panel2 = new JPanel();
-		this.setIconImage(icon1.getImage());
+		/**
+		 * Устанавливаем иконку для главной формы
+		 * 
+		 */
+		setIconImage(icon1.getImage());
 		/**
 		 * Отключение автоматичского размещения компонентов на панели
 		 */
@@ -134,7 +147,7 @@ public class MainForm extends JFrame {
 					 */
 					ComponentForm.btnNewButton.setBackground(Color.green);
 					ComponentForm.frame.setTitle("Для жилых помещений");
-					ComponentForm.TxtBox2.setText(String.valueOf(220));
+					ComponentForm.TxtBox2.setText(String.valueOf(n1));
 				    }
 			
 			}
@@ -146,11 +159,14 @@ public class MainForm extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				if (e.getActionCommand().equals("Для производственных помещений")) {
 					new ComponentForm();
+					/**
+					 * Меняем цвет кнокпи. 
+					 */
+					ComponentForm.btnNewButton.setBackground(Color.green);
 					ComponentForm.frame.setTitle("Для производственных помещений");
-					ComponentForm.TxtBox2.setText(String.valueOf(380));
+					ComponentForm.TxtBox2.setText(String.valueOf(n2));
 				    }
 			}
 		});
-		
 	}
 }

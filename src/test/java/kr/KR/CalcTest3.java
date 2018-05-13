@@ -3,6 +3,7 @@
  */
 package kr.KR;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 /**
@@ -16,26 +17,17 @@ public class CalcTest3{
 	/**
 	 * Создание тестовых методов.
 	 */
-	Calculation CalcTest3;
+	ComponentForm CalcTest3;
 
     @BeforeEach
    void setUp() {
-    	CalcTest3 = new Calculation();
+    	CalcTest3 = new ComponentForm();
     }
     @Test
 	void testn2() {
-	    /**
-		 * Максимальная мощность 760.
-		 * Напряжение сети 380.
-		 * Необхожимый коэфицент для расчёта 1.2.
-		 */
-		  float k2=(float)760,r2=(float) 380;
 			/**
-			   * итоговая проверка, tests и result2 сравниваниются на равенство.
+			   * итоговая проверка, того установлен ли шрифт для кнопки
 			   */
-		assertEquals((float)2.4, CalcTest3.sums(k2,r2));
-		/**
-		* Окончание теста расчёта номинала в электрической цепи для производственных помещений.
-		*/
+		  assertTrue(CalcTest3.btnNewButton.isFontSet());
 	}
 }

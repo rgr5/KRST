@@ -20,7 +20,7 @@ public class MathForm implements ActionListener {
 	 *r1-Заранее заданное напряжение сети
 	 *result-Результат вычислений
 	 */
-	float k1;
+	static float k1;
 	float r1;
 	float result;
 	/**

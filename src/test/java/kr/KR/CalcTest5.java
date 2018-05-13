@@ -2,7 +2,8 @@
  * Объявление пакета, в котором находится класс.
  */
 package kr.KR;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 /**
@@ -16,26 +17,18 @@ public class CalcTest5{
 	/**
 	 * Создание тестовых методов.
 	 */
-	Calculation CalcTest5;
+	MainForm CalcTest5;
 
     @BeforeEach
    void setUp() {
-    	CalcTest5 = new Calculation();
+    	CalcTest5 = new MainForm();
     }
     @Test
 	void testn5() {
-		/**
-		 * Максимальная мощность 110.
-		 * Напряжение сети 220.
-		 * Необходимый коэффициент для расчёта 1.2.
-		 */
-		  float k5=(float)110,r5=(float) 220;
 			/**
-			   * итоговая проверка, tests и result1 сравниваются на равенство.
+			   * Проверка 1й формы-Для жилых помещений. 
+			   * проверяет верное ли значение задается для TxtBox2(Напряжение в сети).
 			   */
-	    assertEquals((float)0.6, CalcTest5.sums(k5,r5));
-	   /**
-		* Окончание теста расчёта номинала в электрической цепи для жилых помещений.
-		*/
+	    assertTrue(CalcTest5.n1==220);
 	}
 }

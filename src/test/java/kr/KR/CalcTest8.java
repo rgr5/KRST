@@ -2,7 +2,7 @@
  * Объявление пакета, в котором находится класс.
  */
 package kr.KR;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.BeforeEach;
 /**
@@ -16,27 +16,17 @@ public class CalcTest8{
 	/**
 	 * Создание тестовых методов.
 	 */
-	Calculation CalcTest8;
+	ComponentForm CalcTest8;
 
     @BeforeEach
    void setUp() {
-    	CalcTest8 = new Calculation();
+    	CalcTest8 = new ComponentForm();
     }
     @Test
 	void testn8() {
-	    /**
-		 * Максимальная мощность 5700.
-		 * Напряжение сети 380.
-		 * Необходимый коэффициент для расчёта 1.2.
-		 */
-		  float k8=(float)5700,r8=(float) 380;
 			/**
-			   * итоговая проверка, tests и result2 сравниваются на равенство.
+			   * Проверка того, не является ли поле TxtBox2(напряжение в ести) пустым.
 			   */
-		assertEquals((float)18, CalcTest8.sums(k8,r8));
-		/**
-		* Окончание теста расчёта номинала в электрической цепи для производственных помещений.
-		*/
-		
+		assertNotNull(CalcTest8.TxtBox2.getText());
 	}
 }
