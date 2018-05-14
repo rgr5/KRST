@@ -2,6 +2,9 @@
  * Объявление пакета, в котором находится класс.
  */
 package kr.KR;
+/**
+ * Добавление библиотек для проверки результата теста.
+ */
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -9,9 +12,7 @@ import org.junit.jupiter.api.BeforeEach;
  * Добавление библиотеки для тестирования.
  */
 import org.junit.jupiter.api.Test;
-/**
- * Добавление библиотек пря проверки результата теста.
- */
+
 public class CalcTest3{
 	/**
 	 * Создание тестовых методов.

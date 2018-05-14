@@ -3,7 +3,7 @@
  */
 package kr.KR;
 /**
- * Библиотеки необходимые для работы
+ * Библиотеки необходимые для работы.
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 /**
- * Объявление публичного класса для создания зависимости между классами и выполнение вычислений 
+ * Объявление публичного класса для создания зависимости между классами и выполнение вычислений.
  */
 public class MathForm implements ActionListener {
 	/**
@@ -24,7 +24,7 @@ public class MathForm implements ActionListener {
 	float r1;
 	float result;
 	/**
-	 * Установление связи между родительским и дочерним классом
+	 * Установление связи между родительским и дочерним классом.
 	 */
 	MathForm(ComponentForm parent){
     }
@@ -34,27 +34,27 @@ public class MathForm implements ActionListener {
 	public void actionPerformed(ActionEvent e)  {
 		try {
 		/**
-		 * Создание объекта прослушивающего нажатие кнопок
+		 * Создание объекта прослушивающего нажатие кнопок.
 		 */
         Object src = e.getSource();
         /**
-    	 *Условие  для прослушиваемой кнопки
+    	 *Условие для прослушиваемой кнопки.
     	 */
         if (src == ComponentForm.btnNewButton){
         	/**
-        	 * Ссчитывание введенно максимальной мощности
+        	 * Считывание введенно максимальной мощности.
         	 */
 			k1=Float.parseFloat((ComponentForm.TxtBox1.getText( )));
 			/**
-			 * Считывание заранее заданного напряжения сети
+			 * Считывание заранее заданного напряжения сети.
 			 */
 			r1=Float.parseFloat((ComponentForm.TxtBox2.getText( )));
 			/**
-			 * Вычисление напряжения в сети с помощью специальной функции расчёта
+			 * Вычисление напряжения в сети с помощью специальной функции расчёта.
 			 */
 			result=Calculation.sums(k1, r1);
 			/**
-			 * Вввод результатов на экранную форму
+			 * Вввод результатов на экранную форму.
 			 */
 			ComponentForm.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
         } 

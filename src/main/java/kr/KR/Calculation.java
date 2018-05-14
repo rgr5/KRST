@@ -12,7 +12,7 @@ public class Calculation {
     	 */
     	float sum;
     	/**
-    	 * Выполнение рассчетов
+    	 * Выполнение расчётов
     	 */
     	sum = (float) ((k1*1.2)/r1);
     	/**
