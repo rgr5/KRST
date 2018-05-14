@@ -1,7 +1,5 @@
-language: 
-java
-script: 
-mvn test -B
+language: java
+script: mvn test -B
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
