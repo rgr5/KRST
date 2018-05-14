@@ -23,7 +23,7 @@ public class CalcTest7{
     @Test
    	void testn7() {
    			/**
-   			   * Проверка формы для компонентов на возможность отображения.
+   			   * Проверка формы содержащей компоненты на возможность отображения.
    			   */
    	    assertTrue(ComponentForm.frame.isVisible());
    	}

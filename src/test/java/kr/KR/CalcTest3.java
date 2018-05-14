@@ -23,7 +23,7 @@ public class CalcTest3{
     @Test
 	void testn2() {
 			/**
-			   * итоговая проверка, того установлен ли шрифт для кнопки
+			   * Проверка того установлен ли шрифт для кнопки
 			   */
 		  assertTrue(ComponentForm.btnNewButton.isFontSet());
 	}
